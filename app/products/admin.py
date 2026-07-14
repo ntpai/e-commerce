@@ -11,5 +11,5 @@ def to_active(modeladmin, request, queryset):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['product_name', 'status', 'stock', 'price']
+    list_display = ['name', 'status', 'stock', 'price']
     actions = [to_active, to_inactive]
